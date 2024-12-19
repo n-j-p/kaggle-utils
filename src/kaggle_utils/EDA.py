@@ -1,6 +1,7 @@
 def xvarplot(df):
     '''cross-variable correlation plot'''
     import matplotlib.pyplot as plt
+    import seaborn as sns
     
     nr, nc = df.shape
 
