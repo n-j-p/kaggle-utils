@@ -1,0 +1,11 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kaggle-utils"
+version = "0.1"
+authors = [{name = "n-j-p"}]
+description = "Useful functions for kaggle notebooks."
+readme = "README.md"
+license = {file = "LICENSE"}
