@@ -1,5 +1,7 @@
 def xvarplot(df):
     '''cross-variable correlation plot'''
+    import matplotlib.pyplot as plt
+    
     nr, nc = df.shape
 
     nc -= 1
