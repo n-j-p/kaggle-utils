@@ -49,6 +49,9 @@ def xvarplot(df):
 
 def cat_pie(df, catvars, ncols=2):
     '''multi-panel pie chart for categorical variables.'''
+    import pandas as pd
+    import matplotlib.pyplot as plt
+    import seaborn as sns
     counts = pd.melt(train[cats]).groupby('variable').value_counts().reset_index()
     def pie_chart(n, kind, **kwargs):
         plt.pie(x = n, labels = kind)
