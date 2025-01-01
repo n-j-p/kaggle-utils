@@ -46,3 +46,13 @@ def xvarplot(df):
                 ax3.set_ylabel('')
                 ax3.set_yticklabels('')
                 ax3.set_xticklabels('')
+
+def cat_pie(df, catvars, ncols=2):
+    '''multi-panel pie chart for categorical variables.'''
+    counts = pd.melt(train[cats]).groupby('variable').value_counts().reset_index()
+    def pie_chart(n, kind, **kwargs):
+        plt.pie(x = n, labels = kind)
+    g = sns.FacetGrid(counts, 
+                      col = 'variable',
+                      col_wrap = ncols)
+    g.map(pie_chart, 'count', 'value')
