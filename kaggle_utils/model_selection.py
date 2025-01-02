@@ -1,4 +1,5 @@
 def show_scv_results(cv_results_obj):
+    import matplotlib.pyplot as plt
     try:
         param_names = cv_results_obj.param_distributions.keys()
     except AttributeError:
