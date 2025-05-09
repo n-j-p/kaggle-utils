@@ -17,7 +17,8 @@ def xvarplot(df):
             # ax = sns.histplot(data=df,
             #                   x=df.columns[i], 
             #                   legend=False)
-            ax = plt.hist(df.iloc[:,i])
+            plt.hist(df.iloc[:,i])
+            ax = plt.gca()
             ax.set_ylabel('')
             ax.set_yticks([])
             ax.set_xlabel(df.columns[i])
@@ -29,7 +30,8 @@ def xvarplot(df):
             # ax = sns.histplot(data=df,
             #                   y=df.columns[j],
             #                   legend=False)
-            ax = plt.hist(df[:,j])
+            plt.hist(df[:,j])
+            ax = plt.gca()
             ax.set_xlabel('')
             ax.set_ylabel(df.columns[j])
             ax.yaxis.set_label_position('right') 
@@ -44,7 +46,8 @@ def xvarplot(df):
                 #                       s=0.5,
                 #                       x=df.columns[i],
                 #                       y=df.columns[j], legend=False)
-                ax3 = plt.plot(df[:,i],df[:,j], 'k.')
+                plt.plot(df[:,i],df[:,j], 'k.')
+                ax3 = plt.gca()
                 ax3.set_xlabel('')
                 ax3.set_ylabel('')
                 ax3.set_yticklabels('')
